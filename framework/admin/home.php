@@ -1,5 +1,5 @@
 <?php
-function soulmedic_wm4d_support() {
+function soulmedic_kris_support() {
 	?>
     <div class="soulmedic_geo_wm4d_wrap">
     <h1>Soulmedic Theme and WM4D Options Integration Support</h1>
