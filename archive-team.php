@@ -4,7 +4,7 @@
 <script>
 (function($) {	
 	$(document).ready(function() {
-		var breadcrumb = '<a href="/">Home</a><span class="fa fa-angle-double-right">  </span><h1>Meet the Team</h1>';
+		var breadcrumb = '<a href="/">Home</a><span class="fa fa-angle-double-right">  </span><h1>Team</h1>';
 		$('div.breadcrumb').html(breadcrumb);
 	});
 })(jQuery);
@@ -60,7 +60,7 @@
             <article id="post-team" <?php post_class('blog-entry'); ?>>
                 <div class="blog-entry-inner">
                 	<div class="entry-details">
-                        <div class="entry-title"><h4>Meet the Team</h4></div>
+                        <div class="entry-title"><h4>Team</h4></div>
                         <div class="entry-body"><?php echo do_shortcode(get_option('wm4d_page_team')); ?></div>
                     </div>
                 </div>
@@ -90,15 +90,10 @@
                                 
                                 <!-- .entry-title -->
                                 <div class="entry-title">
-<?php /*?>                                	<h4><?php the_title();?></h4> .entry-title 
-<?php */?>                                	<h4><a href="<?php the_permalink();?>" title="<?php printf(esc_attr__('%s'),the_title_attribute('echo=0'));?>"><?php the_title();?></a></h4>
+                                	<h4><a href="<?php the_permalink();?>" title="<?php printf(esc_attr__('%s'),the_title_attribute('echo=0'));?>"><?php the_title();?></a></h4>
                                 </div> 
                                                                 
-                                <div class="entry-body"><?php echo the_excerpt();?></div>
-                                                                
-                                <a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__('%s'), the_title_attribute('echo=0'));?>" class="dt-sc-button small read-more">
-	                                             	<?php _e('Read More','dt_themes');?> <span class="fa fa-angle-double-right"> </span></a>
-                                
+                                <div class="entry-body"><?php echo the_content();?></div>
                             
                             </div><!-- .entry-details -->
                             

@@ -5,12 +5,7 @@ $wm4d_multiple_select = get_option('wm4d_multiple_select');
 <script>
 (function($) {	
 	$(document).ready(function() {
-//		if( '<?=$wm4d_multiple_select?>' != 'enable') {
-//			var breadcrumb = '<a href="/">Home</a><span class="fa fa-angle-double-right">  </span><h1>Meet the Doctor</h1>';
-//		}
-//		if( '<?=$wm4d_multiple_select?>' == 'enable') {
-			var breadcrumb = '<a href="/">Home</a><span class="fa fa-angle-double-right">  </span><h1>Meet the Doctors</h1>';
-//		}
+			var breadcrumb = '<a href="/">Home</a><span class="fa fa-angle-double-right">  </span><h1>Doctors</h1>';
 		$('div.breadcrumb').html(breadcrumb);
 	});
 })(jQuery);
@@ -65,12 +60,8 @@ $wm4d_multiple_select = get_option('wm4d_multiple_select');
             <article id="post-doctor" <?php post_class('blog-entry'); ?>>
                 <div class="blog-entry-inner">
                 	<div class="entry-details">
-<?php /*?>                    	<?php if ($wm4d_multiple_select!='enable') { ?>
-                        <div class="entry-title"><h4>Meet the Doctor</h4></div>
-                     	<?php } if ($wm4d_multiple_select=='enable') { ?>
-<?php */?>                        <div class="entry-title"><h4>Meet the Doctors</h4></div>
-<?php /*?>                        <?php } ?>
-<?php */?>                        <div class="entry-body"><?php echo do_shortcode(get_option('wm4d_page_doctor')); ?></div>
+                        <div class="entry-title"><h4>Doctors</h4></div>
+                        <div class="entry-body"><?php echo do_shortcode(get_option('wm4d_page_doctor')); ?></div>
                     </div>
                 </div>
             </article>
@@ -99,15 +90,10 @@ $wm4d_multiple_select = get_option('wm4d_multiple_select');
                                 
                                 <!-- .entry-title -->
                                 <div class="entry-title">
-<?php /*?>                                	<h4><?php the_title();?></h4> .entry-title 
-<?php */?>                                	<h4><a href="<?php the_permalink();?>" title="<?php printf(esc_attr__('%s'),the_title_attribute('echo=0'));?>"><?php the_title();?></a></h4>
+                                    <h4><a href="<?php the_permalink();?>" title="<?php printf(esc_attr__('%s'),the_title_attribute('echo=0'));?>"><?php the_title();?></a></h4>
                                 </div> 
                                                                 
-                                <div class="entry-body"><?php echo the_excerpt();?></div>
-                                                                
-                                <a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__('%s'), the_title_attribute('echo=0'));?>" class="dt-sc-button small read-more">
-	                                             	<?php _e('Read More','dt_themes');?> <span class="fa fa-angle-double-right"> </span></a>
-                                
+                                <div class="entry-body"><?php echo the_content();?></div>
                             
                             </div><!-- .entry-details -->
                             

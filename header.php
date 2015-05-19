@@ -95,14 +95,17 @@
 		<?php
             if( is_page() ):
                 global $post;
-                dttheme_slider_section( $post->ID);	
+				call_soulmedic_page_kris( $post->ID );
 			elseif( is_singular('procedures') ) :
                 global $post;
                 procedure_slider_out( $post->ID);
+				call_soulmedic_kris();
             elseif( is_post_type_archive('product') ):
                 dttheme_slider_section( get_option('woocommerce_shop_page_id') );	
-            endif;		
-            
+				call_soulmedic_kris();
+            else: echo '</div><div id="home_widget" class="column dt-sc-one-fourth"></div></div><div class="home_wrap_full"></div>';
+			endif;
+			
             if( is_page_template('tpl-contact.php') ):
                 global $post;
                 $tpl_default_settings = get_post_meta($post->ID,'_tpl_default_settings',TRUE);
@@ -113,7 +116,7 @@
                     echo '</div>';
                 endif;
             endif;
-			
+
 			if( !in_array('events-archive',get_body_class()) && !in_array('events-single',get_body_class()) && !in_array('single-tribe_venue',get_body_class()) 
 				&& !in_array('single-tribe_organizer',get_body_class())  ) {
 					
@@ -131,11 +134,5 @@
 							endif;
 						endif;
 			}?>
-            </div>
-            <div id="home_widget" class="column dt-sc-one-fourth">
-				<?php if(function_exists('dynamic_sidebar') && dynamic_sidebar(('home-page-area-sidebar')) ): endif; ?>            </div>
-            </div>
-            <div class="home_wrap_full">
-				<?php if(function_exists('dynamic_sidebar') && dynamic_sidebar(('home-page-area-full-sidebar')) ): endif; ?>            </div>
             </div>
             <div class="container">        
