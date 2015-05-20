@@ -95,10 +95,10 @@ $wm4d_multiple_select = get_option('wm4d_multiple_select');
                   	  <?php endif;?>
                       
                       	<div class="entry-title">
-                      		<h4><a href="<?php the_permalink();?>" title="<?php printf( esc_attr__('%s'), the_title_attribute('echo=0'));?>"><?php the_title();?></a></h4>
+                      		<h3><a href="<?php the_permalink();?>" title="<?php printf( esc_attr__('%s'), the_title_attribute('echo=0'));?>"><?php the_title();?></a></h3>
                       	</div>
                         
-                        <div class="entry-metadata">
+<?php /*?>                        <div class="entry-metadata">
                         
 							<?php
 //							if ($wm4d_multiple_select!='enable') { 
@@ -118,7 +118,7 @@ $wm4d_multiple_select = get_option('wm4d_multiple_select');
                             <p class="<?php echo $hide_category_meta;?> categories"><?php echo $categories;  ?></p>
                             
                         </div><!-- .entry-metadata-->
-                        
+<?php */?>                        
                         <div class="entry-body"><?php
 						
 							the_content();

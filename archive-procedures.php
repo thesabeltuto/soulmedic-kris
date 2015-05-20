@@ -77,7 +77,7 @@
                                 
                                 <!-- .entry-title -->
                                 <div class="entry-title">
-                                	<h4><a href="<?php the_permalink();?>" title="<?php printf(esc_attr__('%s'),the_title_attribute('echo=0'));?>"><?php the_title();?></a></h4>
+                                	<h3><a href="<?php the_permalink();?>" title="<?php printf(esc_attr__('%s'),the_title_attribute('echo=0'));?>"><?php the_title();?></a></h3>
                                 </div> <!-- .entry-title -->
                                                                 
                                 <div class="entry-body"><?php echo dttheme_excerpt(30);?></div>
