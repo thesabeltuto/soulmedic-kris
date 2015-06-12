@@ -6,30 +6,26 @@ function my_dynamic_menu_items( $menu_items ) {
     foreach ( $menu_items as $menu_item ) {
 		$title = $menu_item->title;
         if ( preg_match('%client_name%', $title) ) {
-            global $shortcode_tags;
-				$newitem .= get_general_data('client_name', $title);
-				$menu_item->title = $newitem;
+			$title = get_general_data('client_name', $title);
         }
         if ( preg_match('%practice_name%', $title) ) {
-            global $shortcode_tags;
-				$newitem .= get_general_data('practice_name', $title);
-				$menu_item->title = $newitem;
+			$title = get_general_data('practice_name', $title);
         }
         if ( preg_match('%doctor_name%', $title) ) {
-            global $shortcode_tags;
-				$newitem = get_multi_data('doctor_name', $title);
-				$menu_item->title = $newitem;
+			$title = get_multi_data('doctor_name', $title);
         }
         if ( preg_match('%doctor_title%', $title) ) {
-            global $shortcode_tags;
-				$newitem = get_multi_data('doctor_title', $title);
-				$menu_item->title = $newitem;
+			$title = get_multi_data('doctor_title', $title);
+        }
+        if ( preg_match('%location%', $title) ) {
+			$title = get_general_data('location', $title);
         }
         if ( preg_match('%phone_numbers_menu%', $title) ) {
-            global $shortcode_tags;
-				$newitem = get_phones_menu($title);
-				$menu_item->title = $newitem;
+			$title = get_phones_menu($title);
         }
+		
+		global $shortcode_tags;
+		$menu_item->title = $title;
    }
     return $menu_items;
 }
@@ -71,6 +67,9 @@ function call_title_shortcode($title){
 	if(preg_match('%location%', $title)){
 		$title = get_multi_data('location', $title);
 	}
+	if(preg_match('%short_location%', $title)){
+		$title = get_multi_data('short_location', $title);
+	}
 	if(preg_match('%doctor_name%', $title)){
 		$title = get_multi_data('doctor_name', $title);
 	}
@@ -78,7 +77,7 @@ function call_title_shortcode($title){
 		$title = get_multi_data('doctor_title', $title);
 	}
 	
-	return $title;	
+	return $title;
 }
 
 function get_general_data($match, $title) {
@@ -89,6 +88,18 @@ function get_general_data($match, $title) {
 	if($match == 'practice_name') {
 		$string = explode('%practice_name%', $title );
 		$match1 = get_option('wm4d_practice');
+	}
+	if($match == 'doctor_name') {
+		$string = explode('%doctor_name%', $title );
+		$match1 = get_option('wm4d_doctor');
+	}
+	if($match == 'doctor_title') {
+		$string = explode('%doctor_title%', $title );
+		$match1 = get_option('wm4d_doctor').', '.get_option('wm4d_doc_titles');
+	}
+	if($match == 'location') {
+		$string = explode('%location%', $title );
+		$match1 = nl2br(get_option('wm4d_location'));
 	}
 	$title = $string[0];
 	$title .= $match1;
@@ -123,6 +134,12 @@ function get_multi_data($match, $title) {
 		$match1 = get_option('wm4d_location');
 		$matchN = get_option('wm4d_locations');
 		$string = explode('%location', $title );
+	}
+	
+	if($match == 'short_location') {
+		$match1 = get_option('wm4d_location_short');
+		$matchN = get_option('wm4d_phones_loc');
+		$string = explode('%short_location', $title );
 	}
 	
 	$title = $string[0];
