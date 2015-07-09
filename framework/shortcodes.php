@@ -259,6 +259,8 @@ function call_address_shortcode($address, $line){
 			return $address;
 			break;
 		}
+	} else {
+		return $address;
 	}
 }
 
