@@ -95,7 +95,8 @@
 		<?php
             if( is_page() ):
                 global $post;
-				call_soulmedic_page_kris( $post->ID );
+                dttheme_slider_section( $post->ID);	
+				call_soulmedic_kris();
 			elseif( is_singular('procedures') ) :
                 global $post;
                 procedure_slider_out( $post->ID);
