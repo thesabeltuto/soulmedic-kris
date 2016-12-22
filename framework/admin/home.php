@@ -1,15 +1,15 @@
 <?php
 function soulmedic_kris_support() {
 	?>
-    <div class="soulmedic_geo_wm4d_wrap">
-    <h1>Soulmedic Theme and WM4D Options Integration Support</h1>
+    <div class="soulmedic_kris_wm4d_wrap">
+    <h1>Soulmedic Kris Theme and WM4D Options Integration Support</h1>
     <div id="wm4d_nav">
         <ul>
-            <li id="soulmedic_geo_wm4d_li0" class="active"><a href="?page=soulmedic_geo_support">Home</a></li>
-            <li id="soulmedic_geo_wm4d_li1"><a href="?page=parent">soulmedic Geo</a></li>
-            <li id="soulmedic_geo_wm4d_li2"><a href="?page=wm4d_options">WM4D Options</a></li>
-            <li id="soulmedic_geo_wm4d_li2"><a href="nav-menus.php">Menu</a></li>
-            <li id="soulmedic_geo_wm4d_li2"><a href="?page=layerslider">Slider</a></li>
+            <li id="soulmedic_kris_wm4d_li0" class="active"><a href="?page=soulmedic_kris_support">Home</a></li>
+            <li id="soulmedic_kris_wm4d_li1"><a href="?page=parent">soulmedic Geo</a></li>
+            <li id="soulmedic_kris_wm4d_li2"><a href="?page=wm4d_options">WM4D Options</a></li>
+            <li id="soulmedic_kris_wm4d_li2"><a href="nav-menus.php">Menu</a></li>
+            <li id="soulmedic_kris_wm4d_li2"><a href="?page=layerslider">Slider</a></li>
        </ul>
     </div>
     
@@ -18,14 +18,14 @@ function soulmedic_kris_support() {
     <hr />
     <p>Inception, I know...</p>
 
-    <h3>Soulmedic-WM4D Integration Shortcodes</h3>
+    <h3>Soulmedic and WM4D Integration Shortcodes</h3>
     <hr />
     <p>Allowed WM4D Shortcodes only work within <strong>( title="", phone="", location="", url="" )</strong> tags.<br />
     	Otherwise, use the original shortcode stated in the WM4D Options Plugin.<br />
         <a href="?page=wm4d_options">Click here</a> to get ID numbers of each item.</p>
 
-    <div class="soulmedic_geo_wm4d_section support">
-    <table border="0" cellspacing="0" cellpadding="8" class="soulmedic_geo_wm4d_table_support">
+    <div class="soulmedic_kris_wm4d_section support">
+    <table border="0" cellspacing="0" cellpadding="8" class="soulmedic_kris_wm4d_table_support">
         <thead>
             <th>Name</th>
             <th>Code</th>
@@ -146,8 +146,8 @@ function soulmedic_kris_support() {
     <p>Allowed WM4D Shortcodes only work within the <strong>( title="" )</strong> tag.<br />
     	Otherwise, use the original shortcode stated in the WM4D Options Plugin.<br />
 		<a href="?page=wm4d_options">Click here</a> to get ID numbers of each item.</p>
-   <div class="soulmedic_geo_wm4d_section support">
-    <table border="0" cellspacing="0" cellpadding="8" class="soulmedic_geo_wm4d_table_support">
+   <div class="soulmedic_kris_wm4d_section support">
+    <table border="0" cellspacing="0" cellpadding="8" class="soulmedic_kris_wm4d_table_support">
         <thead>
             <th>Style</th>
             <th>Starting Code</th>
@@ -227,8 +227,8 @@ function soulmedic_kris_support() {
     	Allowed WM4D Shortcodes only work within <strong>( title="", phone="", location="", url="" )</strong> tags.<br />
     	Otherwise, use the original shortcode stated in the WM4D Options Plugin.<br />
 		<a href="?page=wm4d_options">Click here</a> to get ID numbers of each item.</p>
-    <div class="soulmedic_geo_wm4d_section support">
-    <table border="0" cellspacing="0" cellpadding="8" class="soulmedic_geo_wm4d_table_support">
+    <div class="soulmedic_kris_wm4d_section support">
+    <table border="0" cellspacing="0" cellpadding="8" class="soulmedic_kris_wm4d_table_support">
         <thead>
             <th>Style</th>
             <th>Starting Code</th>
@@ -279,8 +279,8 @@ function soulmedic_kris_support() {
 
     <h3>Soulmedic Page: Lists Shortcodes</h3>
     <hr />
-    <div class="soulmedic_geo_wm4d_section support">
-    <table border="0" cellspacing="0" cellpadding="8" class="soulmedic_geo_wm4d_table_support">
+    <div class="soulmedic_kris_wm4d_section support">
+    <table border="0" cellspacing="0" cellpadding="8" class="soulmedic_kris_wm4d_table_support">
         <thead>
             <th>Style</th>
             <th>Starting Code</th>
@@ -311,8 +311,8 @@ function soulmedic_kris_support() {
 
     <h3>Soulmedic Page: Space and Divisions Shortcodes</h3>
     <hr />
-    <div class="soulmedic_geo_wm4d_section support">
-    <table border="0" cellspacing="0" cellpadding="8" class="soulmedic_geo_wm4d_table_support">
+    <div class="soulmedic_kris_wm4d_section support">
+    <table border="0" cellspacing="0" cellpadding="8" class="soulmedic_kris_wm4d_table_support">
         <thead>
             <th>Style</th>
             <th>Starting Code</th>
@@ -348,8 +348,8 @@ function soulmedic_kris_support() {
 
     <h3>Layer Slider Settings</h3>
     <hr />
-    <div class="soulmedic_geo_wm4d_section support">
-    <table border="0" cellspacing="0" cellpadding="8" class="soulmedic_geo_wm4d_table_support">
+    <div class="soulmedic_kris_wm4d_section support">
+    <table border="0" cellspacing="0" cellpadding="8" class="soulmedic_kris_wm4d_table_support">
         <thead>
             <th>Slide / Section</th>
             <th>ID Attribute</th>
@@ -429,8 +429,8 @@ function soulmedic_kris_support() {
     <hr />
     <p>Allowed WM4D Shortcodes only work within <strong>( address="" and description="" )</strong> tags.<br />
 		<a href="?page=wm4d_options">Click here</a> to get ID numbers of each item.</p>
-    <div class="soulmedic_geo_wm4d_section support">
-    <table border="0" cellspacing="0" cellpadding="8" class="soulmedic_geo_wm4d_table_support">
+    <div class="soulmedic_kris_wm4d_section support">
+    <table border="0" cellspacing="0" cellpadding="8" class="soulmedic_kris_wm4d_table_support">
         <thead>
             <th>Input / Section</th>
             <th>Allowed WM4D Shortcodes</th>
